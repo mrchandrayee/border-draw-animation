@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073443">
+  <title>Border Draw | Animation Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Animation Lab home"><span class="mark">✳</span> motion.lab</a>
+      <nav><a href="#effects">Effects</a><a href="#source">Source</a></nav>
+    </header>
+
+    <section class="intro">
+      <div class="eyebrow">CSS MICRO-INTERACTIONS</div>
+      <h1>Border Draw <span>| Animation</span></h1>
+      <p>Three ways to make a simple card feel alive. Hover or focus each card to explore the motion.</p>
+      <div class="chips"><span>HTML</span><span>CSS ONLY</span><span>NO LIBRARIES</span></div>
+    </section>
+
+    <section class="cards" id="effects" aria-label="Border animation examples">
+      <article class="card draw-border" tabindex="0">
+        <div class="icon">✍️</div>
+        <h2>Border Draw</h2>
+        <p>Hover over me — the border draws itself smoothly from the corners.</p>
+        <p class="direction">✦ Top/right then bottom/left ✦</p>
+        <div class="tag">hover trigger · staggered animation</div>
+      </article>
+
+      <article class="card perpetual-draw" tabindex="0">
+        <div class="icon">🌀</div>
+        <h2>Perpetual Draw</h2>
+        <p>Borders draw themselves continuously in a loop.</p>
+        <p class="direction">No hover needed — infinite animated stroke.</p>
+        <div class="tag">auto-draw · endless flow</div>
+      </article>
+
+      <article class="card corner-sweep" tabindex="0">
+        <div class="icon">🎨</div>
+        <h2>Corner Sweep</h2>
+        <p>A glowing gradient border that sweeps across all four edges.</p>
+        <p class="direction">Hover to see the magic.</p>
+        <div class="tag">gradient sweep on hover</div>
+      </article>
+    </section>
+
+    <section class="source" id="source">
+      <div class="source-heading"><span class="lights"><i></i><i></i><i></i></span><h2>HTML</h2><span class="language">MARKUP</span></div>
+      <pre><code>&lt;div class="card draw-border"&gt;
+  &lt;div class="icon"&gt;✍️&lt;/div&gt;
+  &lt;h2&gt;Border Draw&lt;/h2&gt;
+  &lt;p&gt;Hover over me — the border draws itself smoothly from the corners.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section class="source">
+      <div class="source-heading"><span class="lights"><i></i><i></i><i></i></span><h2>CSS</h2><span class="language">BASE CARD</span></div>
+      <pre><code>.card {
+  width: 320px;
+  background: rgba(15, 25, 35, 0.65);
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}</code></pre>
+    </section>
+
+    <footer><span>ANIMATION STUDY / 01—03</span><span>BUILT WITH HTML + CSS</span></footer>
+  </main>
+</body>
+</html>
